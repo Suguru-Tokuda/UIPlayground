@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+extension Double {
+    func toCurrencyStr() -> String {
+        let formatter = NumberFormatter()
+        formatter.locale = Locale.current
+        formatter.numberStyle = .currency
+        return formatter.string(from: self as NSNumber) ?? ""
+    }
+}
