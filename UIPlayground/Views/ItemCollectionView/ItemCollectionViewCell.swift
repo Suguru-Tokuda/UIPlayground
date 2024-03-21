@@ -10,12 +10,6 @@ import UIKit
 class ItemCollectionViewCell: UICollectionViewCell {
     static let identifier = "ItemCollectionViewCell"
 
-    private let paddingView: UIView = {
-        let wrapperView = UIView()
-        wrapperView.translatesAutoresizingMaskIntoConstraints = false
-        return wrapperView
-    }()
-
     private let itemImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -72,38 +66,38 @@ extension ItemCollectionViewCell {
         backgroundColor = .white
         layer.cornerRadius = 8
 
-        addSubview(paddingView)
-        paddingView.addSubview(itemImageView)
-        paddingView.addSubview(itemLabel)
-        paddingView.addSubview(priceLabel)
-        paddingView.addSubview(addToCartButton)
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(itemImageView)
+        contentView.addSubview(itemLabel)
+        contentView.addSubview(priceLabel)
+        contentView.addSubview(addToCartButton)
     }
 
     private func applyConstraints() {
         let padding: CGFloat = 10
 
-        let wrapperViewConstraints = [
-            paddingView.topAnchor.constraint(equalTo: topAnchor, constant: padding),
-            paddingView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding),
-            paddingView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
-            paddingView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding)
+        let contentViewConstraints = [
+            contentView.topAnchor.constraint(equalTo: topAnchor, constant: padding),
+            contentView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding),
+            contentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
+            contentView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding)
         ]
 
         let itemImageViewConstraints = [
-            itemImageView.leadingAnchor.constraint(equalTo: paddingView.leadingAnchor),
-            itemImageView.centerYAnchor.constraint(equalTo: paddingView.centerYAnchor),
+            itemImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            itemImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             itemImageView.heightAnchor.constraint(equalToConstant: 56),
             itemImageView.widthAnchor.constraint(equalToConstant: 56)
         ]
 
         let itemLabelConstraints = [
-            itemLabel.topAnchor.constraint(equalTo: paddingView.topAnchor),
-            itemLabel.leadingAnchor.constraint(equalTo: itemImageView.trailingAnchor, constant: padding),
-            itemLabel.trailingAnchor.constraint(equalTo: paddingView.trailingAnchor)
+            itemLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            itemLabel.leadingAnchor.constraint(equalTo: itemImageView.trailingAnchor, constant: padding * 2),
+            itemLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ]
 
         let priceLabelConstraints = [
-            priceLabel.bottomAnchor.constraint(equalTo: paddingView.bottomAnchor),
+            priceLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             priceLabel.leadingAnchor.constraint(equalTo: itemLabel.leadingAnchor),
         ]
 
@@ -111,12 +105,12 @@ extension ItemCollectionViewCell {
         priceLabel.setContentHuggingPriority(UILayoutPriority(252), for: .vertical)
 
         let addToCartButtonConstraints = [
-            addToCartButton.bottomAnchor.constraint(equalTo: paddingView.bottomAnchor),
-            addToCartButton.trailingAnchor.constraint(equalTo: paddingView.trailingAnchor),
+            addToCartButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            addToCartButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             addToCartButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 50)
         ]
 
-        NSLayoutConstraint.activate(wrapperViewConstraints)
+        NSLayoutConstraint.activate(contentViewConstraints)
         NSLayoutConstraint.activate(itemImageViewConstraints)
         NSLayoutConstraint.activate(itemLabelConstraints)
         NSLayoutConstraint.activate(priceLabelConstraints)
