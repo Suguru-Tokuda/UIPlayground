@@ -12,7 +12,7 @@ class MainCoordinator: Coordinator {
     var navigationController: UINavigationController = UINavigationController()
 
     func startCoordinator() {
-        let sampleViewTableVC = SampleViewTableViewController()
+        let sampleViewTableVC = MainTableViewController()
         sampleViewTableVC.setCoordinator(coordinator: self)
         self.navigationController.pushViewController(sampleViewTableVC, animated: false)
     }

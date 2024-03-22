@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SampleViewTableViewController: UIViewController {
+class MainTableViewController: UIViewController {
     var coordinator: MainCoordinator?
     var pages: [PageEnum] = PageEnum.allCases
 
@@ -22,7 +22,7 @@ class SampleViewTableViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
@@ -33,17 +33,17 @@ class SampleViewTableViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
-    
+
     func setCoordinator(coordinator: MainCoordinator) {
         self.coordinator = coordinator
     }
 }
 
-extension SampleViewTableViewController: UITableViewDataSource {
+extension MainTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         PageEnum.allCases.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var contentConfiguration = cell.defaultContentConfiguration()
@@ -53,7 +53,7 @@ extension SampleViewTableViewController: UITableViewDataSource {
     }
 }
 
-extension SampleViewTableViewController: UITableViewDelegate {
+extension MainTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         coordinator?.navigate(page: pages[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)

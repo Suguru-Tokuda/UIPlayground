@@ -30,7 +30,7 @@
 		BB668C342BACCBA700340F1B /* VideoReelCloneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668C332BACCBA700340F1B /* VideoReelCloneCollectionViewCell.swift */; };
 		BB668C362BACCC4800340F1B /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668C352BACCC4800340F1B /* VideoModel.swift */; };
 		BBC502192BADF32400A701CF /* videoList.json in Resources */ = {isa = PBXBuildFile; fileRef = BBC502182BADF32400A701CF /* videoList.json */; };
-		BBC5021C2BAE094100A701CF /* SampleViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC5021B2BAE094100A701CF /* SampleViewTableViewController.swift */; };
+		BBC5021C2BAE094100A701CF /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC5021B2BAE094100A701CF /* MainTableViewController.swift */; };
 		BBC502202BAE0A1600A701CF /* PageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC5021F2BAE0A1600A701CF /* PageEnum.swift */; };
 		BBC502232BAE0FBB00A701CF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC502222BAE0FBB00A701CF /* MainCoordinator.swift */; };
 		BBC502252BAE100600A701CF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC502242BAE100600A701CF /* Coordinator.swift */; };
@@ -81,7 +81,7 @@
 		BB668C332BACCBA700340F1B /* VideoReelCloneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReelCloneCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB668C352BACCC4800340F1B /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		BBC502182BADF32400A701CF /* videoList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = videoList.json; sourceTree = "<group>"; };
-		BBC5021B2BAE094100A701CF /* SampleViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewTableViewController.swift; sourceTree = "<group>"; };
+		BBC5021B2BAE094100A701CF /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		BBC5021F2BAE0A1600A701CF /* PageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageEnum.swift; sourceTree = "<group>"; };
 		BBC502222BAE0FBB00A701CF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		BBC502242BAE100600A701CF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -192,8 +192,8 @@
 		BB668C112BABB76300340F1B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BB668C322BACCB8D00340F1B /* VideoReels */,
 				BB668C232BABBAFF00340F1B /* ItemCollectionView */,
+				BB668C322BACCB8D00340F1B /* VideoReels */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				BB668C282BABBE2400340F1B /* ItemsViewController.swift */,
-				BBC5021B2BAE094100A701CF /* SampleViewTableViewController.swift */,
+				BBC5021B2BAE094100A701CF /* MainTableViewController.swift */,
 				BB668C2E2BACCA5900340F1B /* VideoReelsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -263,8 +263,8 @@
 		BBC502212BAE0FAC00A701CF /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				BBC502222BAE0FBB00A701CF /* MainCoordinator.swift */,
 				BBC502242BAE100600A701CF /* Coordinator.swift */,
+				BBC502222BAE0FBB00A701CF /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -401,7 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBC5021C2BAE094100A701CF /* SampleViewTableViewController.swift in Sources */,
+				BBC5021C2BAE094100A701CF /* MainTableViewController.swift in Sources */,
 				BB668BE42BABB68700340F1B /* ViewController.swift in Sources */,
 				BB668C292BABBE2400340F1B /* ItemsViewController.swift in Sources */,
 				BB668C272BABBB8100340F1B /* ItemCollectionViewCell.swift in Sources */,
