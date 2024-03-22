@@ -14,8 +14,7 @@ class TikTokCloneViewController: UIViewController {
         layout.scrollDirection = .vertical
         layout.sectionInset = .init(top: 0, left: 0, bottom: 0, right: 0)
         layout.minimumLineSpacing = 0
-        let config = UICollectionViewCompositionalLayoutConfiguration()
-        config.contentInsetsReference = .none
+
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(TikTokCloneCollectionViewCell.self, forCellWithReuseIdentifier: TikTokCloneCollectionViewCell.identifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
