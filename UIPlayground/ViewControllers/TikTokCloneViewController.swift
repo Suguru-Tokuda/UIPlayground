@@ -64,8 +64,7 @@ extension TikTokCloneViewController: UICollectionViewDelegate {
 
 extension TikTokCloneViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height)
-//        let size = view.frame.size
-//        return CGSize(width: size.width, height: size.height)
+        let size = view.frame.size
+        return CGSize(width: size.width, height: size.height)
     }
 }
