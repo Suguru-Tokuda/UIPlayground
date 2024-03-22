@@ -12,9 +12,9 @@ class MainCoordinator: Coordinator {
     var navigationController: UINavigationController = UINavigationController()
 
     func startCoordinator() {
-        let sampleViewTableVC = MainTableViewController()
-        sampleViewTableVC.setCoordinator(coordinator: self)
-        self.navigationController.pushViewController(sampleViewTableVC, animated: false)
+        let mainTableViewController = MainTableViewController()
+        mainTableViewController.setCoordinator(coordinator: self)
+        self.navigationController.pushViewController(mainTableViewController, animated: false)
     }
 
     func navigate(page: PageEnum) {
