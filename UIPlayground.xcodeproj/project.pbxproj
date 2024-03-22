@@ -25,6 +25,12 @@
 		BB668C272BABBB8100340F1B /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668C262BABBB8100340F1B /* ItemCollectionViewCell.swift */; };
 		BB668C292BABBE2400340F1B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668C282BABBE2400340F1B /* ItemsViewController.swift */; };
 		BB668C2B2BABC07E00340F1B /* itemList.json in Resources */ = {isa = PBXBuildFile; fileRef = BB668C2A2BABC07E00340F1B /* itemList.json */; };
+		BB668C2F2BACCA5900340F1B /* TikTokCloneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668C2E2BACCA5900340F1B /* TikTokCloneViewController.swift */; };
+		BB668C312BACCB6300340F1B /* TikTokCloneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668C302BACCB6300340F1B /* TikTokCloneViewModel.swift */; };
+		BB668C342BACCBA700340F1B /* TikTokCloneCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668C332BACCBA700340F1B /* TikTokCloneCollectionViewCell.swift */; };
+		BB668C362BACCC4800340F1B /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668C352BACCC4800340F1B /* VideoModel.swift */; };
+		BB668C402BADB99F00340F1B /* SnapTik_App_7330727297772784939-HD.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BB668C3F2BADB99F00340F1B /* SnapTik_App_7330727297772784939-HD.mp4 */; };
+		BB668C422BADBCA700340F1B /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BB668C412BADBCA700340F1B /* video.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +73,12 @@
 		BB668C262BABBB8100340F1B /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB668C282BABBE2400340F1B /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		BB668C2A2BABC07E00340F1B /* itemList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = itemList.json; sourceTree = "<group>"; };
+		BB668C2E2BACCA5900340F1B /* TikTokCloneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokCloneViewController.swift; sourceTree = "<group>"; };
+		BB668C302BACCB6300340F1B /* TikTokCloneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokCloneViewModel.swift; sourceTree = "<group>"; };
+		BB668C332BACCBA700340F1B /* TikTokCloneCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTokCloneCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB668C352BACCC4800340F1B /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		BB668C3F2BADB99F00340F1B /* SnapTik_App_7330727297772784939-HD.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SnapTik_App_7330727297772784939-HD.mp4"; sourceTree = "<group>"; };
+		BB668C412BADBCA700340F1B /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +129,7 @@
 		BB668BDE2BABB68700340F1B /* UIPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				BB668C372BACD2E700340F1B /* Assets */,
 				BB668BED2BABB69200340F1B /* Info.plist */,
 				BB668BDF2BABB68700340F1B /* AppDelegate.swift */,
 				BB668BE12BABB68700340F1B /* SceneDelegate.swift */,
@@ -165,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				BB668C212BABBA8400340F1B /* ItemsViewModel.swift */,
+				BB668C302BACCB6300340F1B /* TikTokCloneViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -172,6 +186,7 @@
 		BB668C112BABB76300340F1B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BB668C322BACCB8D00340F1B /* TikTokClone */,
 				BB668C232BABBAFF00340F1B /* ItemCollectionView */,
 			);
 			path = Views;
@@ -181,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				BB668C282BABBE2400340F1B /* ItemsViewController.swift */,
+				BB668C2E2BACCA5900340F1B /* TikTokCloneViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				BB668C1D2BABB90700340F1B /* ItemModel.swift */,
+				BB668C352BACCC4800340F1B /* VideoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -224,6 +241,23 @@
 				BB668C262BABBB8100340F1B /* ItemCollectionViewCell.swift */,
 			);
 			path = ItemCollectionView;
+			sourceTree = "<group>";
+		};
+		BB668C322BACCB8D00340F1B /* TikTokClone */ = {
+			isa = PBXGroup;
+			children = (
+				BB668C332BACCBA700340F1B /* TikTokCloneCollectionViewCell.swift */,
+			);
+			path = TikTokClone;
+			sourceTree = "<group>";
+		};
+		BB668C372BACD2E700340F1B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BB668C412BADBCA700340F1B /* video.mp4 */,
+				BB668C3F2BADB99F00340F1B /* SnapTik_App_7330727297772784939-HD.mp4 */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,7 +365,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB668BE92BABB69200340F1B /* Assets.xcassets in Resources */,
+				BB668C422BADBCA700340F1B /* video.mp4 in Resources */,
 				BB668C2B2BABC07E00340F1B /* itemList.json in Resources */,
+				BB668C402BADB99F00340F1B /* SnapTik_App_7330727297772784939-HD.mp4 in Resources */,
 				BB668BEC2BABB69200340F1B /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,10 +396,14 @@
 				BB668BE42BABB68700340F1B /* ViewController.swift in Sources */,
 				BB668C292BABBE2400340F1B /* ItemsViewController.swift in Sources */,
 				BB668C272BABBB8100340F1B /* ItemCollectionViewCell.swift in Sources */,
+				BB668C362BACCC4800340F1B /* VideoModel.swift in Sources */,
+				BB668C342BACCBA700340F1B /* TikTokCloneCollectionViewCell.swift in Sources */,
 				BB668C202BABB95E00340F1B /* LocalDataManager.swift in Sources */,
+				BB668C312BACCB6300340F1B /* TikTokCloneViewModel.swift in Sources */,
 				BB668BE02BABB68700340F1B /* AppDelegate.swift in Sources */,
 				BB668C1A2BABB7E600340F1B /* Double.swift in Sources */,
 				BB668BE22BABB68700340F1B /* SceneDelegate.swift in Sources */,
+				BB668C2F2BACCA5900340F1B /* TikTokCloneViewController.swift in Sources */,
 				BB668C252BABBB1F00340F1B /* ItemCollectionView.swift in Sources */,
 				BB668C1C2BABB82500340F1B /* UIImageView.swift in Sources */,
 				BB668C1E2BABB90700340F1B /* ItemModel.swift in Sources */,
