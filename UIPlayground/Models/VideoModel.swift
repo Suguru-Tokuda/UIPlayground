@@ -7,10 +7,9 @@
 
 import Foundation
 
-struct VideoModel {
+struct VideoModel: Decodable {
     let caption: String
     let userName: String
     let audioTrackName: String
-    let videoFileName: String
-    let videoFileFormat: String
+    let videoURL: String
 }

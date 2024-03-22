@@ -20,12 +20,18 @@ class LocalDataManager: LocalDataManaging {
                 do {
                     data = try Data(contentsOf: url)
                     if let data {
-                        let parsedData = try JSONDecoder().decode(type.self, from: data)
-                        return parsedData
+                        do {
+                            let parsedData = try JSONDecoder().decode(type.self, from: data)
+                            return parsedData
+                        } catch {
+                            print(error)
+                            throw JsonDecoderError.parsing
+                        }
                     } else {
                         throw JsonDecoderError.noData
                     }
                 } catch {
+                    print(error)
                     throw JsonDecoderError.noData
                 }
             } else {
