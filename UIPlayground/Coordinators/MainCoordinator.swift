@@ -8,7 +8,7 @@
 import UIKit
 
 class MainCoordinator: Coordinator {
-    var childCoordinator: [Coordinator] = []
+    var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController = UINavigationController()
 
     func startCoordinator() {
