@@ -68,10 +68,6 @@ extension VideoReelsViewController: UICollectionViewDataSource {
     }
 }
 
-extension VideoReelsViewController: UICollectionViewDelegate {
-    
-}
-
 extension VideoReelsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = view.frame.size

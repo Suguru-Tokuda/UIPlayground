@@ -9,11 +9,14 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
+    private var mainCoordinator: MainCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = VideoReelsViewController()
+        mainCoordinator = MainCoordinator()
+        mainCoordinator?.startCoordinator()
+        window?.rootViewController = mainCoordinator?.navigationController
         window?.makeKeyAndVisible()
     }
 
