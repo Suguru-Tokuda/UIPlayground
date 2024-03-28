@@ -23,6 +23,8 @@ class MainCoordinator: Coordinator {
             navigationController.pushViewController(ItemsViewController(), animated: true)
         case .videoReels:
             navigationController.pushViewController(VideoReelsViewController(), animated: true)
+        case .scrollViewPaginationViewController:
+            navigationController.pushViewController(ScrollViewPaginationViewController(), animated: true)
         }
     }
 }

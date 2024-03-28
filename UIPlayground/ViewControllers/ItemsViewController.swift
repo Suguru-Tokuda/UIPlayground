@@ -9,6 +9,11 @@ import UIKit
 
 class ItemsViewController: UIViewController {
     var vm: ItemsViewModel = ItemsViewModel()
+    let cellSpacing: CGFloat = 20
+    var cellWidth: CGFloat {
+        collectionView.bounds.size.width * 0.74666667
+    }
+    var currentIndex: IndexPath?
     
     private let contentView: UIView = {
         let contentView = UIView()
@@ -86,6 +91,29 @@ extension ItemsViewController: UICollectionViewDataSource {
         cell.configure(itemModel: vm.items[indexPath.row])
         return cell
     }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        print("scrollViewWillEndDragging")
+        print("velocity: \(velocity)")
+        //        targetContentOffset.pointee = scrollView.contentOffset
+
+        //        var xOffset: CGFloat = 0
+        //        var indexPathToScrollTo: IndexPath?
+        //
+        //        if let indexPath = collectionView.indexPathForItem(at: collectionView.findVisiblePoint()) {
+        //            indexPathToScrollTo = indexPath
+        //            currentIndex = indexPath
+        //        } else {
+        //            if let currentIndex {
+        //                indexPathToScrollTo = currentIndex
+        //            }
+        //        }
+        //
+        //        guard let indexPathToScrollTo else { return }
+        //        let row = indexPathToScrollTo.row
+        //        xOffset = cellWidth * CGFloat(row) + (row == 0 ? 0 : cellSpacing)
+        //        targetContentOffset.pointee = CGPoint(x: xOffset, y: 0)
+    }
 }
 
 extension ItemsViewController: UICollectionViewDelegateFlowLayout {
@@ -97,7 +125,7 @@ extension ItemsViewController: UICollectionViewDelegateFlowLayout {
      item height: 88
      */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = collectionView.bounds.width * 0.74666667
+        let width: CGFloat = cellWidth
         let maxWidth: CGFloat = 320
         let currentWidth: CGFloat = min(width, maxWidth)
         let height: CGFloat = 88
