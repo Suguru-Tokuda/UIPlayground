@@ -8,7 +8,7 @@
 import UIKit
 
 class MainTableViewController: UIViewController {
-    var coordinator: MainCoordinator?
+    weak var coordinator: MainCoordinator?
     var pages: [PageEnum] = PageEnum.allCases
 
     private let tableView: UITableView = {
