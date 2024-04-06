@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB13DB992BC1A1BE005DC932 /* InteractivePopRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13DB982BC1A1BE005DC932 /* InteractivePopRecognizer.swift */; };
+		BB13DB9B2BC1A461005DC932 /* VideoReelsGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13DB9A2BC1A461005DC932 /* VideoReelsGradientView.swift */; };
 		BB57AA9B2BB4BE6A009CBB6C /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB57AA9A2BB4BE6A009CBB6C /* UICollectionView.swift */; };
 		BB57AA9D2BB5AD08009CBB6C /* ScrollViewPaginationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB57AA9C2BB5AD08009CBB6C /* ScrollViewPaginationViewController.swift */; };
 		BB668BE02BABB68700340F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668BDF2BABB68700340F1B /* AppDelegate.swift */; };
@@ -56,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB13DB982BC1A1BE005DC932 /* InteractivePopRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractivePopRecognizer.swift; sourceTree = "<group>"; };
+		BB13DB9A2BC1A461005DC932 /* VideoReelsGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReelsGradientView.swift; sourceTree = "<group>"; };
 		BB57AA9A2BB4BE6A009CBB6C /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		BB57AA9C2BB5AD08009CBB6C /* ScrollViewPaginationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewPaginationViewController.swift; sourceTree = "<group>"; };
 		BB668BDC2BABB68700340F1B /* UIPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				BB668C1F2BABB95E00340F1B /* LocalDataManager.swift */,
+				BB13DB982BC1A1BE005DC932 /* InteractivePopRecognizer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				BB668C332BACCBA700340F1B /* VideoReelCloneCollectionViewCell.swift */,
+				BB13DB9A2BC1A461005DC932 /* VideoReelsGradientView.swift */,
 			);
 			path = VideoReels;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 				BB668C312BACCB6300340F1B /* VideoReelViewModel.swift in Sources */,
 				BBC502202BAE0A1600A701CF /* PageEnum.swift in Sources */,
 				BB57AA9B2BB4BE6A009CBB6C /* UICollectionView.swift in Sources */,
+				BB13DB9B2BC1A461005DC932 /* VideoReelsGradientView.swift in Sources */,
 				BB668BE02BABB68700340F1B /* AppDelegate.swift in Sources */,
 				BB668C1A2BABB7E600340F1B /* Double.swift in Sources */,
 				BB668BE22BABB68700340F1B /* SceneDelegate.swift in Sources */,
@@ -427,6 +434,7 @@
 				BBC502232BAE0FBB00A701CF /* MainCoordinator.swift in Sources */,
 				BB668C1C2BABB82500340F1B /* UIImageView.swift in Sources */,
 				BB668C1E2BABB90700340F1B /* ItemModel.swift in Sources */,
+				BB13DB992BC1A1BE005DC932 /* InteractivePopRecognizer.swift in Sources */,
 				BB668C182BABB79900340F1B /* JsonDecoderError.swift in Sources */,
 				BB668C222BABBA8400340F1B /* ItemsViewModel.swift in Sources */,
 			);
