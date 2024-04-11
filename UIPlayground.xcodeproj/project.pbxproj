@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		BB13DB992BC1A1BE005DC932 /* InteractivePopRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13DB982BC1A1BE005DC932 /* InteractivePopRecognizer.swift */; };
 		BB13DB9B2BC1A461005DC932 /* VideoReelsGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13DB9A2BC1A461005DC932 /* VideoReelsGradientView.swift */; };
+		BB44FEEF2BC893140041F386 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB44FEEE2BC893140041F386 /* CustomNavigationController.swift */; };
+		BB44FEF12BC893AE0041F386 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB44FEF02BC893AE0041F386 /* NSObject.swift */; };
 		BB57AA9B2BB4BE6A009CBB6C /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB57AA9A2BB4BE6A009CBB6C /* UICollectionView.swift */; };
 		BB57AA9D2BB5AD08009CBB6C /* ScrollViewPaginationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB57AA9C2BB5AD08009CBB6C /* ScrollViewPaginationViewController.swift */; };
+		BB6654092BC88D62004D3E33 /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6654082BC88D62004D3E33 /* CAGradientLayer.swift */; };
+		BB66540C2BC88DCA004D3E33 /* TopBottomGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66540B2BC88DCA004D3E33 /* TopBottomGradientViewController.swift */; };
+		BB66540F2BC89026004D3E33 /* TopNavBarLessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66540E2BC89026004D3E33 /* TopNavBarLessViewController.swift */; };
 		BB668BE02BABB68700340F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668BDF2BABB68700340F1B /* AppDelegate.swift */; };
 		BB668BE22BABB68700340F1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668BE12BABB68700340F1B /* SceneDelegate.swift */; };
-		BB668BE42BABB68700340F1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668BE32BABB68700340F1B /* ViewController.swift */; };
 		BB668BE92BABB69200340F1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB668BE82BABB69200340F1B /* Assets.xcassets */; };
 		BB668BEC2BABB69200340F1B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BB668BEB2BABB69200340F1B /* Base */; };
 		BB668BFA2BABB6AF00340F1B /* UIPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668BF92BABB6AF00340F1B /* UIPlaygroundTests.swift */; };
@@ -60,12 +64,16 @@
 /* Begin PBXFileReference section */
 		BB13DB982BC1A1BE005DC932 /* InteractivePopRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractivePopRecognizer.swift; sourceTree = "<group>"; };
 		BB13DB9A2BC1A461005DC932 /* VideoReelsGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReelsGradientView.swift; sourceTree = "<group>"; };
+		BB44FEEE2BC893140041F386 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		BB44FEF02BC893AE0041F386 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		BB57AA9A2BB4BE6A009CBB6C /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		BB57AA9C2BB5AD08009CBB6C /* ScrollViewPaginationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewPaginationViewController.swift; sourceTree = "<group>"; };
+		BB6654082BC88D62004D3E33 /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
+		BB66540B2BC88DCA004D3E33 /* TopBottomGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBottomGradientViewController.swift; sourceTree = "<group>"; };
+		BB66540E2BC89026004D3E33 /* TopNavBarLessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavBarLessViewController.swift; sourceTree = "<group>"; };
 		BB668BDC2BABB68700340F1B /* UIPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB668BDF2BABB68700340F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB668BE12BABB68700340F1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB668BE32BABB68700340F1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB668BE82BABB69200340F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB668BEB2BABB69200340F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB668BED2BABB69200340F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,6 +128,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB66540D2BC89010004D3E33 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				BB66540E2BC89026004D3E33 /* TopNavBarLessViewController.swift */,
+				BB44FEEE2BC893140041F386 /* CustomNavigationController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		BB668BD32BABB68700340F1B = {
 			isa = PBXGroup;
 			children = (
@@ -146,10 +163,10 @@
 				BB668BED2BABB69200340F1B /* Info.plist */,
 				BB668BDF2BABB68700340F1B /* AppDelegate.swift */,
 				BB668BE12BABB68700340F1B /* SceneDelegate.swift */,
-				BB668BE32BABB68700340F1B /* ViewController.swift */,
 				BB668BE82BABB69200340F1B /* Assets.xcassets */,
 				BB668BEA2BABB69200340F1B /* LaunchScreen.storyboard */,
 				BBC502212BAE0FAC00A701CF /* Coordinators */,
+				BB66540D2BC89010004D3E33 /* General */,
 				BB668C162BABB78100340F1B /* Enums */,
 				BB668C0F2BABB75000340F1B /* Extensions */,
 				BB668C152BABB77300340F1B /* Json */,
@@ -185,6 +202,8 @@
 				BB668C192BABB7E600340F1B /* Double.swift */,
 				BB57AA9A2BB4BE6A009CBB6C /* UICollectionView.swift */,
 				BB668C1B2BABB82500340F1B /* UIImageView.swift */,
+				BB6654082BC88D62004D3E33 /* CAGradientLayer.swift */,
+				BB44FEF02BC893AE0041F386 /* NSObject.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,6 +233,7 @@
 				BBC5021B2BAE094100A701CF /* MainTableViewController.swift */,
 				BB57AA9C2BB5AD08009CBB6C /* ScrollViewPaginationViewController.swift */,
 				BB668C2E2BACCA5900340F1B /* VideoReelsViewController.swift */,
+				BB66540B2BC88DCA004D3E33 /* TopBottomGradientViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -413,8 +433,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB66540F2BC89026004D3E33 /* TopNavBarLessViewController.swift in Sources */,
 				BBC5021C2BAE094100A701CF /* MainTableViewController.swift in Sources */,
-				BB668BE42BABB68700340F1B /* ViewController.swift in Sources */,
 				BB668C292BABBE2400340F1B /* ItemsViewController.swift in Sources */,
 				BB668C272BABBB8100340F1B /* ItemCollectionViewCell.swift in Sources */,
 				BB668C362BACCC4800340F1B /* VideoModel.swift in Sources */,
@@ -424,9 +444,13 @@
 				BBC502202BAE0A1600A701CF /* PageEnum.swift in Sources */,
 				BB57AA9B2BB4BE6A009CBB6C /* UICollectionView.swift in Sources */,
 				BB13DB9B2BC1A461005DC932 /* VideoReelsGradientView.swift in Sources */,
+				BB6654092BC88D62004D3E33 /* CAGradientLayer.swift in Sources */,
+				BB44FEEF2BC893140041F386 /* CustomNavigationController.swift in Sources */,
 				BB668BE02BABB68700340F1B /* AppDelegate.swift in Sources */,
 				BB668C1A2BABB7E600340F1B /* Double.swift in Sources */,
 				BB668BE22BABB68700340F1B /* SceneDelegate.swift in Sources */,
+				BB66540C2BC88DCA004D3E33 /* TopBottomGradientViewController.swift in Sources */,
+				BB44FEF12BC893AE0041F386 /* NSObject.swift in Sources */,
 				BBC502252BAE100600A701CF /* Coordinator.swift in Sources */,
 				BB668C2F2BACCA5900340F1B /* VideoReelsViewController.swift in Sources */,
 				BB668C252BABBB1F00340F1B /* ItemCollectionView.swift in Sources */,

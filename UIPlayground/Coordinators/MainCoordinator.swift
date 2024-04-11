@@ -9,7 +9,7 @@ import UIKit
 
 class MainCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
-    var navigationController: UINavigationController = UINavigationController()
+    var navigationController: UINavigationController = CustomNavigationController()
 
     func startCoordinator() {
         let mainTableViewController = MainTableViewController()
@@ -18,13 +18,21 @@ class MainCoordinator: Coordinator {
     }
 
     func navigate(page: PageEnum) {
+        var viewController: UIViewController?
+
         switch page {
         case .horizontalItemCollectionView:
-            navigationController.pushViewController(ItemsViewController(), animated: true)
+            viewController = ItemsViewController()
         case .videoReels:
-            navigationController.pushViewController(VideoReelsViewController(), animated: true)
+            viewController = VideoReelsViewController()
         case .scrollViewPaginationViewController:
-            navigationController.pushViewController(ScrollViewPaginationViewController(), animated: true)
+            viewController = ScrollViewPaginationViewController()
+        case .topBottomGradientViewController:
+            viewController = TopBottomGradientViewController()
+        }
+
+        if let viewController {
+            navigationController.pushViewController(viewController, animated: true)
         }
     }
 }

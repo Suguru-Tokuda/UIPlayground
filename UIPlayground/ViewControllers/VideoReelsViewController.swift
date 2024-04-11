@@ -7,8 +7,7 @@
 
 import UIKit
 
-class VideoReelsViewController: UIViewController {
-    private var popRecognizer: InteractivePopRecognizer?
+class VideoReelsViewController: TopNavBarLessViewController {
     private var vm: VideoReelViewModel = VideoReelViewModel()
     private var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -25,52 +24,27 @@ class VideoReelsViewController: UIViewController {
         return collectionView
     }()
 
-    private let topGradientView: VideoReelsGradientView = {
-        let gradientView = VideoReelsGradientView(
-            frame: .zero,
-            colors: [UIColor.black.withAlphaComponent(0.7).cgColor, UIColor.black.withAlphaComponent(0.0).cgColor],
-            startPoint: CGPoint(x: 0.5, y: 0),
-            endPoint: CGPoint(x: 0.5, y: 1)
-        )
-        gradientView.translatesAutoresizingMaskIntoConstraints = false
-        return gradientView
-    }()
-
-    private let bottomGradientView: VideoReelsGradientView = {
-        let gradientView = VideoReelsGradientView(
-            frame: .zero,
-            colors: [UIColor.black.withAlphaComponent(0.7).cgColor, UIColor.black.withAlphaComponent(0.0).cgColor],
-            startPoint: CGPoint(x: 0.5, y: 1),
-            endPoint: CGPoint(x: 0.5, y: 0)
-        )
-        gradientView.translatesAutoresizingMaskIntoConstraints = false
-        return gradientView
-    }()
-
-    private let gradientHeightMultiplier = 0.2185338866
+    private var gradientHeightMultiplier = 0.2185338866
+    private static let gradientColors = [UIColor.black.withAlphaComponent(0.5).cgColor,
+                                         UIColor.black.withAlphaComponent(0.0).cgColor]
+    private let topGradient = CAGradientLayer(colors: gradientColors)
+    private let bottomGradient = CAGradientLayer(colors: gradientColors)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         vm.loadVideos()
         addSubscriptions()
-        setInteractiveRecognizer()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        setupUI()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.frame = view.bounds
-        applyConstraints()
+        configureGradients()
     }
 
     private func setupUI() {
@@ -79,29 +53,8 @@ class VideoReelsViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         view.addSubview(collectionView)
-        view.addSubview(topGradientView)
-        view.addSubview(bottomGradientView)
-    }
-
-    private func applyConstraints() {
-        NSLayoutConstraint.activate([
-            // topGradientView constraints
-            topGradientView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            topGradientView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            topGradientView.topAnchor.constraint(equalTo: view.topAnchor),
-            topGradientView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: gradientHeightMultiplier),
-            // bottomGradientView constrains
-            bottomGradientView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            bottomGradientView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            bottomGradientView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            bottomGradientView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: gradientHeightMultiplier),
-        ])
-    }
-
-    private func setInteractiveRecognizer() {
-        guard let navigationController else { return }
-        popRecognizer = InteractivePopRecognizer(navigationController: navigationController)
-        navigationController.interactivePopGestureRecognizer?.delegate = popRecognizer
+        view.layer.addSublayer(topGradient)
+        view.layer.addSublayer(bottomGradient)
     }
 
     private func addSubscriptions() {
@@ -110,6 +63,22 @@ class VideoReelsViewController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
+    }
+
+    private func configureGradients() {
+        let gradientHeight = view.bounds.height * gradientHeightMultiplier
+        topGradient.configure(frame: CGRect(x: 0,
+                                            y: 0,
+                                            width: view.bounds.width,
+                                            height: gradientHeight),
+                              startPoint: CGPoint(x: 0.5, y: 0),
+                              endPoint: CGPoint(x: 0.5, y: 1))
+        bottomGradient.configure(frame: CGRect(x: 0,
+                                               y: view.bounds.height - gradientHeight,
+                                               width: view.bounds.width,
+                                               height: gradientHeight),
+                                 startPoint: CGPoint(x: 0.5, y: 1),
+                                 endPoint: CGPoint(x: 0.5, y: 0))
     }
 }
 
