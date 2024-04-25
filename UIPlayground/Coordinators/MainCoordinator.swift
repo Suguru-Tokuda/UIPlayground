@@ -21,6 +21,8 @@ class MainCoordinator: Coordinator {
         var viewController: UIViewController?
 
         switch page {
+        case .horizontalFadeAwayViewController:
+            viewController = HorizontalFadeAwayViewController()
         case .horizontalItemCollectionView:
             viewController = ItemsViewController()
         case .videoReels:
@@ -29,6 +31,8 @@ class MainCoordinator: Coordinator {
             viewController = ScrollViewPaginationViewController()
         case .topBottomGradientViewController:
             viewController = TopBottomGradientViewController()
+        case .testViewController:
+            viewController = TestViewController()
         }
 
         if let viewController {

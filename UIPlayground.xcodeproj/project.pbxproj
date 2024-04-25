@@ -15,6 +15,10 @@
 		BB57AA9D2BB5AD08009CBB6C /* ScrollViewPaginationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB57AA9C2BB5AD08009CBB6C /* ScrollViewPaginationViewController.swift */; };
 		BB5AF0D82BD324BE00B19A0C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5AF0D72BD324BE00B19A0C /* NetworkError.swift */; };
 		BB5AF0DA2BD3261800B19A0C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5AF0D92BD3261800B19A0C /* NetworkManager.swift */; };
+		BB5AF0DD2BD7471B00B19A0C /* MyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB5AF0DB2BD7471B00B19A0C /* MyModel.xcdatamodeld */; };
+		BB5AF0E22BD9B50B00B19A0C /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5AF0E12BD9B50B00B19A0C /* TestViewController.swift */; };
+		BB5AF0E42BD9D28800B19A0C /* HorizontalFadeAwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5AF0E32BD9D28800B19A0C /* HorizontalFadeAwayViewController.swift */; };
+		BB5AF0E72BD9D55600B19A0C /* HorizontalFadeAwayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5AF0E62BD9D55600B19A0C /* HorizontalFadeAwayCollectionViewCell.swift */; };
 		BB6654092BC88D62004D3E33 /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6654082BC88D62004D3E33 /* CAGradientLayer.swift */; };
 		BB66540C2BC88DCA004D3E33 /* TopBottomGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66540B2BC88DCA004D3E33 /* TopBottomGradientViewController.swift */; };
 		BB66540F2BC89026004D3E33 /* TopNavBarLessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66540E2BC89026004D3E33 /* TopNavBarLessViewController.swift */; };
@@ -72,6 +76,10 @@
 		BB57AA9C2BB5AD08009CBB6C /* ScrollViewPaginationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewPaginationViewController.swift; sourceTree = "<group>"; };
 		BB5AF0D72BD324BE00B19A0C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BB5AF0D92BD3261800B19A0C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BB5AF0DC2BD7471B00B19A0C /* MyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyModel.xcdatamodel; sourceTree = "<group>"; };
+		BB5AF0E12BD9B50B00B19A0C /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		BB5AF0E32BD9D28800B19A0C /* HorizontalFadeAwayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalFadeAwayViewController.swift; sourceTree = "<group>"; };
+		BB5AF0E62BD9D55600B19A0C /* HorizontalFadeAwayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalFadeAwayCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB6654082BC88D62004D3E33 /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
 		BB66540B2BC88DCA004D3E33 /* TopBottomGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBottomGradientViewController.swift; sourceTree = "<group>"; };
 		BB66540E2BC89026004D3E33 /* TopNavBarLessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavBarLessViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +140,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB5AF0E52BD9D54A00B19A0C /* HorizontalFadeAwayView */ = {
+			isa = PBXGroup;
+			children = (
+				BB5AF0E62BD9D55600B19A0C /* HorizontalFadeAwayCollectionViewCell.swift */,
+			);
+			path = HorizontalFadeAwayView;
+			sourceTree = "<group>";
+		};
 		BB66540D2BC89010004D3E33 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +160,7 @@
 		BB668BD32BABB68700340F1B = {
 			isa = PBXGroup;
 			children = (
+				BB5AF0DB2BD7471B00B19A0C /* MyModel.xcdatamodeld */,
 				BB668BDE2BABB68700340F1B /* UIPlayground */,
 				BB668BF82BABB6AF00340F1B /* UIPlaygroundTests */,
 				BB668C052BABB6E600340F1B /* UIPlaygroundUITests */,
@@ -224,6 +241,7 @@
 		BB668C112BABB76300340F1B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BB5AF0E52BD9D54A00B19A0C /* HorizontalFadeAwayView */,
 				BB668C232BABBAFF00340F1B /* ItemCollectionView */,
 				BB668C322BACCB8D00340F1B /* VideoReels */,
 			);
@@ -238,6 +256,8 @@
 				BB57AA9C2BB5AD08009CBB6C /* ScrollViewPaginationViewController.swift */,
 				BB668C2E2BACCA5900340F1B /* VideoReelsViewController.swift */,
 				BB66540B2BC88DCA004D3E33 /* TopBottomGradientViewController.swift */,
+				BB5AF0E12BD9B50B00B19A0C /* TestViewController.swift */,
+				BB5AF0E32BD9D28800B19A0C /* HorizontalFadeAwayViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -447,15 +467,19 @@
 				BB668C362BACCC4800340F1B /* VideoModel.swift in Sources */,
 				BB668C342BACCBA700340F1B /* VideoReelCloneCollectionViewCell.swift in Sources */,
 				BB668C202BABB95E00340F1B /* LocalDataManager.swift in Sources */,
+				BB5AF0E72BD9D55600B19A0C /* HorizontalFadeAwayCollectionViewCell.swift in Sources */,
 				BB668C312BACCB6300340F1B /* VideoReelViewModel.swift in Sources */,
 				BBC502202BAE0A1600A701CF /* PageEnum.swift in Sources */,
 				BB57AA9B2BB4BE6A009CBB6C /* UICollectionView.swift in Sources */,
 				BB13DB9B2BC1A461005DC932 /* VideoReelsGradientView.swift in Sources */,
+				BB5AF0DD2BD7471B00B19A0C /* MyModel.xcdatamodeld in Sources */,
 				BB5AF0DA2BD3261800B19A0C /* NetworkManager.swift in Sources */,
+				BB5AF0E42BD9D28800B19A0C /* HorizontalFadeAwayViewController.swift in Sources */,
 				BB6654092BC88D62004D3E33 /* CAGradientLayer.swift in Sources */,
 				BB44FEEF2BC893140041F386 /* CustomNavigationController.swift in Sources */,
 				BB668BE02BABB68700340F1B /* AppDelegate.swift in Sources */,
 				BB668C1A2BABB7E600340F1B /* Double.swift in Sources */,
+				BB5AF0E22BD9B50B00B19A0C /* TestViewController.swift in Sources */,
 				BB668BE22BABB68700340F1B /* SceneDelegate.swift in Sources */,
 				BB66540C2BC88DCA004D3E33 /* TopBottomGradientViewController.swift in Sources */,
 				BB44FEF12BC893AE0041F386 /* NSObject.swift in Sources */,
@@ -732,6 +756,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FVEGF5DQ7U;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=iphoneos*]" = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sugurutokuda.UIPlaygroundUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -749,6 +775,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FVEGF5DQ7U;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sugurutokuda.UIPlaygroundUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -799,6 +826,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BB5AF0DB2BD7471B00B19A0C /* MyModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BB5AF0DC2BD7471B00B19A0C /* MyModel.xcdatamodel */,
+			);
+			currentVersion = BB5AF0DC2BD7471B00B19A0C /* MyModel.xcdatamodel */;
+			name = MyModel.xcdatamodeld;
+			path = "/Users/suguru/Documents/xcode-workspace/UIPlayground/MyModel.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BB668BD42BABB68700340F1B /* Project object */;
 }
